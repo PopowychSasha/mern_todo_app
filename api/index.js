@@ -17,6 +17,7 @@ MongoClient.connect('mongodb://localhost:27017/todos', { useUnifiedTopology: tru
   db = client.db('todos');
   await db.collection('todos').deleteMany();
 
+  
   await db.collection('todos').insertMany([
     { done: true, desc: 'write code' },
     { done: true, desc: 'fix bugs' },
